@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import MovieCard from './movieCard.js';
-import '../style.css';
+
 export default function SearchMovie(){
 
       //states input query, movies
-    const [query, setQuery] = useState('');
+    const [query, setQuery] = useState(null);
     //create the state for movies, and update that state appropriate
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(false);
@@ -33,10 +33,10 @@ export default function SearchMovie(){
         <div>
             
             <form className="form" onSubmit={searchMovies}>
-                <label className="label" htmlFor="query">Film :</label>
+                <label className="label" htmlFor="query">FILM :</label>
                 <input className="input" type="text" name="query"
-                    placeholder="i.e. Jurassic Park" value={query} onChange={(e) => setQuery(e.target.value)} />
-                <button className="button" type="submit">Recherche </button>
+                    placeholder="i.e. Jurassic Park" value={query} onChange={(e) => setQuery(e.target.value)} required/>
+                <button className="button" type="submit">Recherche ! </button>
             </form>
 
             {loading && <p className="flash info">Chargement...</p>}

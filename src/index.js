@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SearchMovie from "./searchMovie";
-
+import SearchMovie from "./component/searchMovie";
+import "./style.css";
 class Main extends React.Component {
   render() {
     return (
